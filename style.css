@@ -868,7 +868,7 @@ h2 {
 
 /**** SKÆRM UNDER 720px ****/
 
-@media (max-width: 475px) {
+@media (max-width: 720px) {
 
     .burgermenu {
         position: fixed;
