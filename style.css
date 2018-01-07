@@ -1,0 +1,897 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #444444;
+    background-repeat: no-repeat;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+/**** OVERLAY ****/
+
+.overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: black;
+    overflow: hidden;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.overlay-content {
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 220px;
+}
+
+.menupunkter {
+    width: 340px;
+    margin: 0 auto;
+}
+
+.overlay .menupunkter a {
+    text-decoration: none;
+    font-size: 35px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    margin: 35px 0;
+    font-family: 'Unica One', cursive;
+    height: 55px;
+    line-height: 55px;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+.overlay .menupunkter a:hover,
+.overlay .menupunkter a:focus {
+    border: 2px solid white;
+}
+
+/**** BURGER MENU ****/
+
+.burgermenu {
+    width: 32px;
+    height: 21px;
+    z-index: 2;
+    position: absolute;
+    top: 45px;
+    right: 110px;
+    cursor: pointer;
+}
+
+.burgermenu span {
+    display: block;
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    top: 9px;
+    position: relative;
+}
+
+.burgermenu span::before {
+    content: '';
+    display: block;
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    transition: all 0.3s ease;
+    top: -9px;
+}
+
+.burgermenu span::after {
+    content: '';
+    display: block;
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    transition: all 0.3s ease;
+    top: 9px;
+}
+
+.burgermenu_active span {
+    height: 0px;
+}
+
+.burgermenu_active span::after {
+    transform: rotate(45deg);
+    top: 0px;
+}
+
+.burgermenu_active span::before {
+    transform: rotate(-45deg);
+    top: 0px;
+}
+
+
+/**** BURGER MENU FARVE ****/
+
+#signep .burgermenu span,
+#signep .burgermenu span::before,
+#signep .burgermenu span::after {
+    background-color: #f19181;
+}
+
+#animation .burgermenu span,
+#animation .burgermenu span::before,
+#animation .burgermenu span::after {
+    background-color: #93edd4;
+}
+
+#webdesign .burgermenu span,
+#webdesign .burgermenu span::before,
+#webdesign .burgermenu span::after {
+    background-color: #f3f5c4;
+}
+
+#ux .burgermenu span,
+#ux .burgermenu span::before,
+#ux .burgermenu span::after {
+    background-color: #3cbac8;
+}
+
+#video .burgermenu span,
+#video .burgermenu span::before,
+#video .burgermenu span::after {
+    background-color: #f9cb8f;
+}
+
+
+/**** FOOTER ****/
+
+footer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 50px;
+    width: 100%;
+}
+
+footer a {
+    font-size: 25px;
+    font-family: 'Unica One', cursive;
+    text-decoration: none;
+    color: white;
+    margin: 0 25px;
+}
+
+.facebook::before {
+    font-family: "fontawesome";
+    content: '\f082';
+    color: white;
+    margin-right: 20px;
+}
+
+.instagram::before {
+    font-family: "fontawesome";
+    content: '\f16d';
+    color: white;
+    margin-right: 20px;
+}
+
+.telefon::before {
+    font-family: "fontawesome";
+    content: '\f098';
+    color: white;
+    margin-right: 20px;
+}
+
+.mail::before {
+    font-family: "fontawesome";
+    content: '\f199';
+    color: white;
+    margin-right: 20px;
+}
+
+/**** BAGGRUND ****/
+
+#signep {
+    background-image: url('img/giraf.svg');
+    background-position: 440px -110px;
+    background-size: 900px;
+}
+
+#animation {
+    background-image: url('img/rhino.svg');
+    background-position: 540px -120px;
+    background-size: 800px;
+}
+
+#webdesign {
+    background-image: url('img/elefant.svg');
+    background-position: 870px -40px;
+    background-size: 1000px;
+}
+
+#ux {
+    background-image: url('img/lion.svg');
+    background-position: 850px -140px;
+    background-size: 800px;
+}
+
+#video {
+    background-image: url('img/ulv.svg');
+    background-position: 600px -190px;
+    background-size: 850px;
+}
+
+.sectionwrapper {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+
+}
+
+.sectionwrapper_ux {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+    padding-top: 180px;
+
+}
+
+
+/**** GENERELT ****/
+
+h1 {
+    font-family: 'Unica One', cursive;
+    font-size: 36px;
+}
+
+h2 {
+    font-family: 'Unica One', cursive;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.column {
+    background-color: rgba(000, 000, 000, 0.45);
+    padding: 25px 25px;
+    display: inline-block;
+}
+
+
+
+/**** TITLER ****/
+
+.signeptitle {
+    color: #f19181;
+    margin-bottom: 30px;
+}
+
+.animationtitle {
+    color: #93edd4;
+    margin-top: 40px;
+
+}
+
+.webdesigntitle {
+    color: #f3f5c4;
+    margin-top: 40px;
+}
+
+.uxtitle {
+    color: #3cbac8;
+    margin-top: 40px;
+}
+
+.videotitle {
+    color: #f9cb8f;
+    margin-top: 40px;
+
+}
+
+
+/**** SIGNE P + CV ****/
+
+.cv {}
+
+.cv p {
+    margin-bottom: 10px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.unica {
+    font-family: 'Unica One', cursive;
+    font-weight: 400;
+}
+
+.cv .space {
+    margin-right: 20px;
+}
+
+.cv .spacefix {
+    margin-right: 54px;
+}
+
+.erhvervsboks {
+    display: flex;
+}
+
+.cv .year {
+    font-family: 'Unica One', cursive;
+}
+
+.cv .year .break {
+    display: block;
+}
+
+.cv .erhverv {
+    line-height: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.cv .erhverv span {
+    font-weight: 400;
+    display: block;
+    font-size: 13px;
+}
+
+
+.signep {
+    display: flex;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 130px;
+    text-align: justify;
+}
+
+.signep .img img {
+    height: 100%;
+}
+
+.signep .content {
+    max-width: 400px;
+    margin-left: 25px;
+}
+
+.signep .content .signeptitle {
+    margin-top: 6px;
+}
+
+.signep .content .linebreak {
+    margin-top: 20px;
+}
+
+
+
+/**** ANIMATION ****/
+
+.animation {
+    position: absolute;
+    left: 166px;
+    top: 0;
+}
+
+.animationcolor {
+    color: #93edd4;
+    margin-top: 0;
+}
+
+.gulddreng {
+
+    width: 435px;
+    margin-top: 338px;
+    text-align: justify;
+}
+
+#animation img {
+    width: 433px;
+    border: 3px solid #93edd4;
+}
+
+.linebreakny {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.andreas {
+    width: 435px;
+    position: absolute;
+    right: 0;
+    top: 540px;
+    text-align: justify;
+}
+
+#animation a {
+    text-decoration: none;
+    color: white;
+}
+
+#animation a:active {
+    color: white;
+}
+
+
+/**** WEBDESIGN ****/
+
+.webdesign {
+    position: absolute;
+    left: 166px;
+    top: 0;
+}
+
+.webdesigncolor {
+    color: #f3f5c4;
+    margin-top: 0;
+}
+
+#webdesign img {
+    border: 3px solid #f3f5c4;
+}
+
+.flatdesign {
+    width: 305px;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    text-align: justify;
+}
+
+.flatdesign img {
+    width: 100%;
+}
+
+.visitkort {
+    width: 255px;
+    position: absolute;
+    bottom: 0;
+    left: 400px;
+    text-align: justify;
+}
+
+.visitkort img {
+    width: 110px;
+}
+
+.visitkort .square {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ccb {
+    width: 355px;
+    margin-top: 170px;
+    position: absolute;
+    right: 0;
+    top: 135px;
+    text-align: justify;
+}
+
+.ccb img {
+    width: 100%;
+}
+
+#webdesign p {
+    margin-bottom: 20px;
+}
+
+#webdesign a {
+    text-decoration: none;
+    color: white;
+}
+
+#webdesign a:active {
+    color: white;
+}
+
+
+/**** UX ****/
+
+.ux {
+    position: absolute;
+    left: 166px;
+    top: 0;
+    width: 200px;
+}
+
+.uxcolor {
+    color: #3cbac8;
+    margin-top: 0;
+}
+
+.keago {
+    width: 375px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+.rep {
+    width: 375px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+#ux img {
+    width: 100%;
+}
+
+#ux .img {
+    position: relative;
+    margin-top: 30px;
+    width: 70%;
+}
+
+#ux iframe {
+    position: absolute;
+    width: 81%;
+    top: -83px;
+    left: 22.5px;
+}
+
+#ux .ikon {
+    width: 90px;
+}
+
+#ux a {
+    z-index: 20;
+}
+
+/**** VIDEO ****/
+
+.video {
+    position: absolute;
+    left: 166px;
+    top: 0;
+    width: 200px;
+}
+
+.videocolor {
+    color: #f9cb8f;
+    margin-top: 0;
+}
+
+.ccbvideo {
+
+    position: absolute;
+    top: 260px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    width: 400px;
+}
+
+#video iframe {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.likeme {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+.likeme {
+    width: 400px;
+}
+
+
+/**** HOVER EFFEKT PÅ BILLEDER ****/
+
+.hover {
+    width: 100%;
+    display: inline-flex;
+}
+
+.hover img:hover {
+    opacity: 0.3;
+    transition: all 0.4s ease;
+}
+
+.hoverani {
+    background-color: #93edd4;
+}
+
+.hoverweb {
+    background-color: #f3f5c4;
+}
+
+/**** MEDIA QUERIES ****/
+
+/**** SKÆRM UNDER 1800px ****/
+
+@media (max-width: 1800px) {
+
+    #video {
+        background-position: 400px -190px;
+        background-size: 850px;
+    }
+
+    #signep {
+        background-position: 400px -150px;
+        background-size: 850px;
+    }
+
+    #animation {
+        background-position: 500px -120px;
+        background-size: 850px;
+    }
+
+    #ux {
+        background-position: 610px -70px;
+        background-size: 750px;
+    }
+
+    #webdesign {
+        background-position: 550px -70px;
+        background-size: 950px;
+    }
+
+    .overlay .menupunkter a {
+        font-size: 25px;
+        margin: 5px 0;
+        height: 50px;
+        line-height: 50px;
+    }
+}
+
+
+
+/**** SKÆRM UNDER 1200px ****/
+
+@media (max-width: 1199px) {
+    .sectionwrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .sectionwrapper_ux {
+        padding-top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .column {
+        position: static;
+        margin: 15px 0 15px 0;
+    }
+
+    .signep {
+        flex-direction: column;
+        order: 1;
+        max-width: 362px;
+    }
+
+    .signep .content {
+        margin-left: 0px;
+    }
+
+    .signep img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cv {
+        order: 2;
+    }
+
+    .column .animation {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .animation {
+        position: static;
+        left: 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    .gulddreng {
+        margin-top: 30px;
+    }
+
+    .animationtitle {
+        text-align: center;
+    }
+
+    .ux {
+        position: static;
+        left: 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    .uxtitle {
+        text-align: center;
+    }
+
+    .webdesign {
+        position: static;
+        left: 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    .webdesigntitle {
+        text-align: center;
+    }
+
+    .visitkort {
+        order: 3;
+        width: 355px;
+    }
+
+    .visitkort img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .flatdesign {
+        order: 1;
+        margin-top: 30px;
+        width: 355px;
+    }
+
+    .flatdesign img {
+        height: 160px;
+    }
+
+    .ccb {
+        order: 2;
+    }
+
+    .ccb img {
+        height: 160px;
+    }
+
+    .video {
+        position: static;
+        left: 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    .videotitle {
+        text-align: center;
+    }
+
+    #video {
+        background-position: 100px -190px;
+        background-size: 850px;
+    }
+
+    #signep {
+        background-position: 20px -190px;
+        background-size: 850px;
+    }
+
+    #animation {
+        background-position: 20px -70px;
+        background-size: 850px;
+    }
+
+    #ux {
+        background-position: 60px -140px;
+        background-size: 850px;
+    }
+
+    #webdesign {
+        background-position: 150px -70px;
+        background-size: 950px;
+    }
+
+    footer {
+        flex-direction: column;
+        display: flex;
+    }
+
+    footer a {
+        margin: 5px 0 5px 0;
+        font-size: 18px;
+    }
+}
+
+/**** SKÆRM UNDER 475px ****/
+
+@media (max-width: 475px) {
+
+    .burgermenu {
+        position: fixed;
+        top: 25px;
+        right: 25px;
+    }
+}
+
+
+/**** SKÆRM UNDER 375px ****/
+
+@media (max-width: 375px) {
+
+    .column {
+        width: 80%;
+    }
+
+    #animation img {
+        width: 100%;
+        height: 140px;
+    }
+
+    #ux iframe {
+        position: absolute;
+        width: 81%;
+        top: -151px;
+        left: 17px;
+    }
+
+    .burgermenu {
+        position: fixed;
+        top: 25px;
+        right: 25px;
+    }
+
+    #ux {
+        background-position: 20px -70px;
+        background-size: 850px;
+    }
+
+    #webdesign {
+        background-position: -120px -70px;
+        background-size: 850px;
+    }
+
+    .visitkort img {
+        width: 125px;
+        height: 125px;
+    }
+
+    .flatdesign img {
+        height: 125px;
+    }
+
+    .ccb img {
+        height: 125px;
+    }
+
+    footer a {
+        font-size: 20px;
+        margin: 10px 0px;
+    }
+
+}
