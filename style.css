@@ -36,6 +36,13 @@ body {
     margin-bottom: 220px;
 }
 
+.logo img {
+    width: 50px;
+    position: absolute;
+    top: 35px;
+    left: 60px;
+}
+
 .menupunkter {
     width: 340px;
     margin: 0 auto;
@@ -665,8 +672,11 @@ h2 {
         height: 50px;
         line-height: 50px;
     }
-}
 
+    footer a {
+        font-size: 20px;
+    }
+}
 
 
 /**** SKÆRM UNDER 1200px ****/
