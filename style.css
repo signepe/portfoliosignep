@@ -764,6 +764,21 @@ h2 {
 /**** SKÆRM UNDER 1199px ****/
 
 @media (max-width: 1199px) {
+    #forside {
+        background-position: center;
+        background-size: 920px;
+    }
+
+    #forside h1 a {
+        padding: 0px 200px 0px 200px;
+        font-size: 50px;
+    }
+
+    .sectionwrapper_forside {
+        width: 100%;
+        display: flex;
+    }
+
     .sectionwrapper {
         width: 100%;
         display: flex;
@@ -912,6 +927,7 @@ h2 {
     footer {
         flex-direction: column;
         display: flex;
+        bottom: 30px;
     }
 
     footer a {
@@ -919,7 +935,6 @@ h2 {
         font-size: 18px;
     }
 }
-
 
 /**** SKÆRM UNDER 720px ****/
 
@@ -930,8 +945,77 @@ h2 {
         top: 25px;
         right: 25px;
     }
+
+    #forside .logo img {
+        position: static;
+        width: 0;
+        height: 0;
+    }
+
+    #signep .overlay .logo img {
+        position: absolute;
+        left: 23px;
+        top: 23px;
+        width: 30px;
+    }
+
+    #ux .overlay .logo img {
+        position: absolute;
+        left: 23px;
+        top: 23px;
+        width: 30px;
+    }
+
+    #video .overlay .logo img {
+        position: absolute;
+        left: 23px;
+        top: 23px;
+        width: 30px;
+    }
+
+    #animation .overlay .logo img {
+        position: absolute;
+        left: 23px;
+        top: 23px;
+        width: 30px;
+    }
+
+    #webdesign .overlay .logo img {
+        position: absolute;
+        left: 23px;
+        top: 23px;
+        width: 30px;
+    }
 }
 
+/**** SKÆRM UNDER 660px ****/
+
+@media (max-width: 660px) {
+    #forside {
+        background-size: 820px;
+    }
+
+    #forside h1 a {
+        padding: 0px 120px 0px 120px;
+        font-size: 50px;
+    }
+
+}
+
+/**** SKÆRM UNDER 400px ****/
+
+@media (max-width: 400px) {
+
+    #forside {
+        background-size: 620px;
+    }
+
+    #forside h1 a {
+        padding: 0px 60px 0px 60px;
+        font-size: 40px;
+
+    }
+}
 
 /**** SKÆRM UNDER 375px ****/
 
